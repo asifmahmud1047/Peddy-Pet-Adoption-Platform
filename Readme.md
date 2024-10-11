@@ -1,124 +1,50 @@
 # Peddy - Pet Adoption Platform
 
-**Welcome to Assignment 6 !!!**
-In this assignment You have to create a pet adoption platform where users can browse and adopt pets. We will provides you APIs to fetch pet-related data such as all pets, categories of pets, and specific pet details , pet data based on category
+Welcome to **Peddy**, a dynamic pet adoption platform where users can browse and adopt pets. This project showcases a fully responsive web application built to provide a seamless experience across all devices, allowing users to explore pets, view detailed information, and even adopt their new best friend. The platform is designed using modern web technologies, utilizing various APIs for fetching data dynamically.
 
-## Private For your Assignment
+## 🚀 Live Link
 
-you have to create private repo in our Google Classroom . here is the Link
+https://leafy-nasturtium-06e292.netlify.app/
 
-# [https://classroom.github.com/a/gUlZfxsK](https://classroom.github.com/a/gUlZfxsK)
+## 📂 Project Overview
 
-## APIs
+**Peddy** allows users to explore pets across different categories, view detailed pet information, and adopt their desired pets. The platform offers a responsive design, ensuring a great user experience on Desktop, Tablet, and Mobile devices.
 
-The following APIs are available in Peddy:
+### Key Features
 
-1. **Fetch All Pets**
+1. **Dynamic Pet Browsing**: Users can view all pets and filter them based on categories like dogs, cats, birds, etc.
+2. **Adopt Process**: Users can adopt pets, which triggers a countdown and updates the adoption status.
+3. **Sorting by Price**: Pets can be sorted by price to help users find the most suitable pet.
+4. **Like Functionality**: Users can like their favorite pets, and liked pets are displayed in a grid.
+5. **Responsive Design**: The platform is fully responsive, providing a seamless experience across devices using Tailwind CSS.
 
-   - **Endpoint:** [https://openapi.programming-hero.com/api/peddy/pets](https://openapi.programming-hero.com/api/peddy/pets)
-   - **Description:** Retrieves a list of all available pets for adoption. The data includes details like pet name, type, age, and adoption status.
+## 🖥️ APIs Used
 
-2. **Fetch Pet Details by ID**
+1. **Fetch All Pets**: Fetches a list of all available pets.
+   - Endpoint: `https://openapi.programming-hero.com/api/peddy/pets`
+2. **Fetch Pet Categories**: Retrieves all available pet categories.
+   - Endpoint: `https://openapi.programming-hero.com/api/peddy/categories`
+3. **Fetch Pets by Category**: Retrieves pets based on a specific category.
+   - Example: `https://openapi.programming-hero.com/api/peddy/category/dog`
+4. **Fetch Pet Details by ID**: Retrieves detailed information about a pet by its ID.
+   - Example: `https://openapi.programming-hero.com/api/peddy/pet/1`
 
-   - **Endpoint:**`https://openapi.programming-hero.com/api/peddy/pet/pet-id`
+## 🛠️ Technologies Used
 
-   - **Example:** [https://openapi.programming-hero.com/api/peddy/pet/1](https://openapi.programming-hero.com/api/peddy/pet/1)
-   - **Description:** Fetches detailed information for a specific pet based on its ID. This can be used to view additional information about the pet such as vacination history, description
+- **HTML5**
+- **CSS3** (with Tailwind CSS for responsiveness)
+- **JavaScript** (ES6+ features)
+- **API Integration**
+- **Git & GitHub**
 
-3. **Fetch All Pet Categories**
+## 📱 Responsive Design
 
-   - **Endpoint:** [https://openapi.programming-hero.com/api/peddy/categories](https://openapi.programming-hero.com/api/peddy/categories)
+The platform is fully responsive and adjusts its layout to fit any screen size, whether Desktop, Tablet, or Mobile. Tailwind CSS's breakpoints are used to ensure smooth transitions and layout adaptations.
 
-   - **Description:** Fetches a list of all pet categories available in the platform, such as dogs, cats, rabbit , bird, etc.
+## 🎨 ES6 Features Used
 
-4. **Fetch Pets by Category**
-
-   - **Endpoint:** `https://openapi.programming-hero.com/api/peddy/category/categoryName`
-   - **Example:** [https://openapi.programming-hero.com/api/peddy/category/dog](https://openapi.programming-hero.com/api/peddy/category/dog)
-
-   - **Description:** Fetches data of pets under a specific category, in this case, dogs. This can be used to filter pets based on their category.
-
-## Key Requirements
-
-### 1. **Navbar**
-
-- Implement the navbar as per the Figma design.
-- Ensure it is responsive across Desktop, Tablet, and Mobile devices.
-- The navbar should collapse into a mobile menu on smaller screens.
-
-### 2. **Banner Section**
-
-- Design the banner section as per Figma design.
-- Include a "View More" button that, when clicked, scrolls down to the “Adopt Your Best Friend” section.
-- Ensure the banner is fully responsive.
-
-### 3. **Adopt Your Best Friend Section**
-
-- **Left Side**:
-  - Display 4 dynamic categories below the section title and subtitle, fetched from the provided API.
-  - Add a "Sort By Price" button on the right, with a subtitle on the left, as per the design.
-  - By default, show all available pets, with the active category styled according to Figma.
-  - After clicking on a category, fetch and display pets from that category in a grid layout.
-  - If no pets are available for a category, show a meaningful message.
-  - Each card must display the following:
-    - Thumbnail/Image
-    - Pet Name
-    - Breed
-    - Birth Date
-    - Gender
-    - Price
-    - Buttons: "Like", "Adopt", and "Details"
-  - If any field is missing from the API response, handle it by displaying a placeholder or meaningful message.
-- **Right Side**:
-  - Clicking the "Like" button should add the pet's thumbnail to the right-side grid.
-  - Display a 2-column layout for liked pet thumbnails.
-
-### 4. **Modal Window**
-
-- When the "Details" button is clicked, open a modal that displays all pet information like figma
-- The modal should close when the user clicks close button.
-
-### 5. **Footer**
-
-- Implement the footer as per the Figma design.
-- Ensure it is responsive.
-
-### 6. **Responsive Design**
-
-- The entire platform must be responsive and functional on Desktop, Tablet, and Mobile devices.
-- Use Tailwind CSS breakpoints for responsiveness.
-
-## Challenges
-
-### 1. **Loading Spinner**
-
-- Display a loading spinner for at least 2 seconds when fetching data from the API.
-
-### 2. **Sort by Price**
-
-- Implement sorting functionality for pets. When the "Sort by Price" button is clicked, sort pets in descending order based on price . sorting on active category is recommended but if you can sort all the data you will get full mark for this requirement.
-
-### 3. **Adopt Button Behavior**
-
-- Implement an adoption process. When the "Adopt" button is clicked, show a countdown (3, 2, 1) and then change the button text to "Adopted."
-
-### 4. **Handle Null or Undefined Values**
-
-- If any values from the API (e.g., pet breed, birth date) are null or undefined, display a placeholder or relevant message instead of leaving it blank.
-
-## 5. A Beautyfull README.md File
-
-Ensure the final project includes a `README.md` file with the following details:
-
-- Project name.
-- Short description of the project.
-- 5 key features of the project.
-- ES6 features used.
-- Live link to the deployed project.
-
-## What to Submit
-
-- Your Private Github Repo Link
-- Your Live Link
-
-# Best of Luck
+- **Arrow Functions**: Used for concise function expressions.
+- **Template Literals**: Used for embedding variables in strings.
+- **Async/Await**: For handling asynchronous API requests in a cleaner, more readable way.
+- **Destructuring Assignment**: Extracting data from objects/arrays in a concise manner.
+- **Promises**: Used to manage asynchronous operations, ensuring proper handling of API responses.
