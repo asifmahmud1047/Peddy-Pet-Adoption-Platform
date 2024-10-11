@@ -1,0 +1,71 @@
+.active-category {
+  background-color: green;
+  color: white;
+}
+
+.category-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 60px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  margin: 10px;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.category-button:hover {
+  background-color: #eaeaea;
+}
+
+/* Media Query for small screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+  .category-button {
+    display: grid;
+    padding: 10px 20px;
+    font-size: medium;
+    border-radius: 20px;
+  }
+  .category-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+}
+
+/* Media Query for medium screens (e.g., tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .category-button {
+    padding: 12px 40px;
+    font-size: large;
+    border-radius: 25px;
+  }
+  .category-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 9px;
+  }
+}
+
+/* Media Query for large screens (e.g., desktop and larger tablets) */
+@media (min-width: 1025px) {
+  .category-button {
+    padding: 15px 60px;
+    font-size: x-large;
+    border-radius: 30px;
+  }
+  .category-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+}

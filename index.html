@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>roughPeddy</title>
+    <link rel="icon" href="images/logo.webp" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/f811dd765f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Raw CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Spinner styles */
+
+      #spinner {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-top: 4px solid #000;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+      }
+
+      /* Spinner animation */
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav class="bg-white shadow-md">
+        <div class="mx-auto px-16">
+          <div class="flex justify-between items-center py-4">
+            <div class="flex gap-4">
+              <img src="images/logo.webp" alt="" />
+              <a href="#" class="text-2xl font-bold">Peddy</a>
+            </div>
+            <div
+              class="hidden md:flex space-x-6 mx-auto justify-between items-center"
+            >
+              <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Shop</a>
+              <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+            <div class="navbar-end flex justify-end md:hidden">
+              <div class="dropdown dropdown-end">
+                <div
+                  tabindex="0"
+                  role="button"
+                  class="btn btn-circle lg:hidden"
+                >
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                >
+                  <li><a>Home</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <i class="fa-regular fa-user p-2 rounded shadow"></i>
+            <!-- <div class="md:hidden">
+              <i class="fa-solid fa-bars focus:outline-none"></i>
+              <button class="text-gray-600 focus:outline-none">Menu</button>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- banner section -->
+      <section class="bg-gray-100 py-12">
+        <div class="max-w-screen-lg mx-auto text-center">
+          <div class="mt-4 flex gap-2 items-center justify-center">
+            <p class="text-lg">Bringing Families Together!</p>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h1 class="text-7xl font-bold lg:px-24">
+            Your Path to Adoption Starts Here
+          </h1>
+          <p class="mt-4 text-lg px-12">
+            The heart of the matter! Adoption is about love, family, and
+            connection. It’s the beautiful act of opening your heart and home to
+            someone who needs it. Whether it’s adopting a child, a pet, or even
+            an idea, it’s a transformative experience.
+          </p>
+          <button
+            class="bg-teal-600 text-white px-6 py-3 mt-8 rounded-lg hover:bg-teal-700 transition-all duration-300"
+            onclick="scrollToAdoption()"
+          >
+            View More
+          </button>
+          <div class="mt-8">
+            <img
+              src="images/pet.webp"
+              alt="Dog and Cat"
+              class="w-full max-w-screen-md mx-auto rounded-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- grid layout and categories -->
+      <section id="adopt-section" class="py-12 bg-white">
+        <div class="max-w-screen-lg mx-auto text-center">
+          <h2 class="text-3xl font-bold">Adopt Your Best Friend</h2>
+          <p class="mt-4 text-lg px-12">
+            A pet means finding a lifelong companion who’ll always have your
+            back and your lap. Adopting a pet isn’t just about giving them a
+            home—it’s about transforming your own life too.
+          </p>
+          <div
+            id="categories"
+            class="lg:flex mx-auto lg:justify-between justify-center items-center mt-6"
+          ></div>
+          <div id="pets-container">
+            <!-- Pet cards will be inserted here by displayPets function -->
+          </div>
+
+          <button id="sort-price" class="bg-teal-600 text-white px-4 py-2 mt-4">
+            Sort by Price
+          </button>
+
+          <div
+            id="pets-grid"
+            class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8"
+          >
+            <!-- Cards with pet details will go here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <!-- Modal for displaying pet details -->
+      <div
+        id="pet-modal"
+        class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden"
+      >
+        <div class="bg-white p-8 rounded-lg max-w-lg w-full relative">
+          <button class="absolute top-4 right-4" onclick="closeModal()">
+            X
+          </button>
+          <div id="pet-details">
+            <!-- Pet details will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-7xl mx-auto text-center">
+        <div>
+          <a class="mb-4" href="">Contact us at support@peddy.com</a>
+        </div>
+        <div>
+          <div class="container mx-auto text-center mt-4">
+            <h2 class="text-lg font-semibold mb-4">Follow Us</h2>
+            <div class="flex justify-center space-x-4">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel=""
+                class="text-gray-400 hover:text-blue-600"
+              >
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel=""
+                class="text-gray-400 hover:text-blue-400"
+              >
+                <i class="fab fa-x fa-2x"></i>
+                <!-- Replace with the correct icon for X -->
+              </a>
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel=""
+                class="text-gray-400 hover:text-red-600"
+              >
+                <i class="fab fa-youtube fa-2x"></i>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel=""
+                class="text-gray-400 hover:text-pink-600"
+              >
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+        <p class="mt-4">&copy; 2024 Peddy. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Spinner -->
+    <div id="spinner"></div>
+
+    <!-- script -->
+    <script src="scriptJs/bttn.js"></script>
+    <script src="scriptJs/fetchingCategory.js"></script>
+    <script src="scriptJs/fetching-Pets-display.js"></script>
+    <script src="scriptJs/fetching-pet-details.js"></script>
+    <script src="scriptJs/fetchPets.js"></script>
+    <script src="scriptJs/likePet.js"></script>
+  </body>
+</html>
