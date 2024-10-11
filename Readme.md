@@ -2,11 +2,15 @@
 
 Welcome to **Peddy**, a dynamic pet adoption platform where users can browse and adopt pets. This project showcases a fully responsive web application built to provide a seamless experience across all devices, allowing users to explore pets, view detailed information, and even adopt their new best friend. The platform is designed using modern web technologies, utilizing various APIs for fetching data dynamically.
 
-## 🚀 Live Link
+## Live Link
 
 https://leafy-nasturtium-06e292.netlify.app/
 
-## 📂 Project Overview
+## Repository Link
+
+https://github.com/programming-hero-web-course2/b10a6-pet-adoption-asifmahmud1047
+
+## Project Overview
 
 **Peddy** allows users to explore pets across different categories, view detailed pet information, and adopt their desired pets. The platform offers a responsive design, ensuring a great user experience on Desktop, Tablet, and Mobile devices.
 
@@ -29,7 +33,7 @@ https://leafy-nasturtium-06e292.netlify.app/
 4. **Fetch Pet Details by ID**: Retrieves detailed information about a pet by its ID.
    - Example: `https://openapi.programming-hero.com/api/peddy/pet/1`
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5**
 - **CSS3** (with Tailwind CSS for responsiveness)
@@ -41,7 +45,7 @@ https://leafy-nasturtium-06e292.netlify.app/
 
 The platform is fully responsive and adjusts its layout to fit any screen size, whether Desktop, Tablet, or Mobile. Tailwind CSS's breakpoints are used to ensure smooth transitions and layout adaptations.
 
-## 🎨 ES6 Features Used
+## ES6 Features Used
 
 - **Arrow Functions**: Used for concise function expressions.
 - **Template Literals**: Used for embedding variables in strings.

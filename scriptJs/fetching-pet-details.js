@@ -9,13 +9,14 @@ function viewDetails(petId) {
           pet.image || "placeholder.jpg"
         }" class="w-full h-48 object-cover rounded-lg">
         <h3 class="text-xl font-bold mt-4">${pet.pet_name}</h3>
-        <p>${pet.description}</p>
+        <p>${pet.pet_details}</p>
         <p class="mt-2"><strong>Vaccination History:</strong> ${
           pet.vaccinated_status || "N/A"
         }</p>
       `;
       document.getElementById("pet-modal").classList.remove("hidden");
     });
+
   // .catch((error) => console.error("Error fetching pet details:", error));
 }
 

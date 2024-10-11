@@ -11,5 +11,4 @@ function likePet(petId) {
           }" class="w-16 h-16 object-cover rounded-full">
         </div>`;
     });
-  // .catch((error) => console.error("Error fetching liked pet:", error));
 }
