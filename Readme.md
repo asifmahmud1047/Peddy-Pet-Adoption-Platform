@@ -22,7 +22,7 @@ https://github.com/programming-hero-web-course2/b10a6-pet-adoption-asifmahmud104
 4. **Like Functionality**: Users can like their favorite pets, and liked pets are displayed in a grid.
 5. **Responsive Design**: The platform is fully responsive, providing a seamless experience across devices using Tailwind CSS.
 
-## 🖥️ APIs Used
+## APIs Used
 
 1. **Fetch All Pets**: Fetches a list of all available pets.
    - Endpoint: `https://openapi.programming-hero.com/api/peddy/pets`
@@ -41,7 +41,7 @@ https://github.com/programming-hero-web-course2/b10a6-pet-adoption-asifmahmud104
 - **API Integration**
 - **Git & GitHub**
 
-## 📱 Responsive Design
+## Responsive Design
 
 The platform is fully responsive and adjusts its layout to fit any screen size, whether Desktop, Tablet, or Mobile. Tailwind CSS's breakpoints are used to ensure smooth transitions and layout adaptations.
 

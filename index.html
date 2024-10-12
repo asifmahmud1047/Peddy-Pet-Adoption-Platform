@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>roughPeddy</title>
+    <title>Peddy</title>
     <link rel="icon" href="images/logo.webp" />
 
     <!-- Google Font -->
@@ -57,16 +57,15 @@
         }
       }
 
-      /* Buttom Active  */
       .active {
         background-color: green;
       }
     </style>
   </head>
-  <body>
+  <body class="text-black">
     <header>
       <!-- navbar -->
-      <nav class="bg-white shadow-md">
+      <nav class="bg-gray-50 shadow-md">
         <div class="mx-auto px-16">
           <div class="flex justify-between items-center py-4">
             <div class="flex gap-4">
@@ -108,9 +107,10 @@
         </div>
       </nav>
     </header>
+
     <main>
       <!-- banner section -->
-      <section class="bg-gray-100 py-12">
+      <section class="bg-white py-12">
         <div class="max-w-screen-lg mx-auto text-center">
           <div class="mt-4 flex gap-2 items-center justify-center">
             <p class="text-lg">Bringing Families Together!</p>
@@ -151,17 +151,25 @@
             back and your lap. Adopting a pet isn’t just about giving them a
             home—it’s about transforming your own life too.
           </p>
+
           <div
             id="categories"
-            class="lg:flex mx-auto lg:justify-between justify-center items-center mt-6"
+            class="flex justify-between items-center my-6"
           ></div>
+
+          <div class="flex justify-between items-center mt-8">
+            <h3 class="text-xl font-bold">Best Deal For you</h3>
+            <button
+              id="sort-price"
+              class="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-all duration-300"
+              onclick="sortPrice()"
+            >
+              Sort by Price
+            </button>
+          </div>
           <div id="pets-container">
             <!-- Pet cards will be inserted here by displayPets function -->
           </div>
-
-          <button id="sort-price" class="bg-teal-600 text-white px-4 py-2 mt-4">
-            Sort by Price
-          </button>
 
           <div
             id="pets-grid"
@@ -180,7 +188,7 @@
       >
         <div class="bg-white p-8 rounded-lg max-w-lg w-full relative">
           <button class="absolute top-4 right-4" onclick="closeModal()">
-            X
+            Cancle
           </button>
           <div id="pet-details">
             <!-- Pet details will be inserted here by JavaScript -->
@@ -247,12 +255,13 @@
     </footer>
 
     <!-- script -->
-    <script src="scriptJs/bttn.js"></script>
+    <script src="./scriptJs/main.js"></script>
+    <!-- <script src="scriptJs/bttn.js"></script>
     <script src="scriptJs/fetchingCategory.js"></script>
     <script src="scriptJs/fetching-Pets-display.js"></script>
     <script src="scriptJs/fetching-pet-details.js"></script>
     <script src="scriptJs/fetchPets.js"></script>
     <script src="scriptJs/likePet.js"></script>
-    <script src="scriptJs/spinner.js"></script>
+    <script src="scriptJs/spinner.js"></script> -->
   </body>
 </html>
