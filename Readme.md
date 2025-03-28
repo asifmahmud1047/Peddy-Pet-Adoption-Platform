@@ -4,11 +4,11 @@ Welcome to **Peddy**, a dynamic pet adoption platform where users can browse and
 
 ## Live Link
 
-[https://leafy-nasturtium-06e292.netlify.app/](https://peddy-pet-adoption-organization.netlify.app/)
+[Pet Adoption Platform](https://peddy-pet-adoption-organization.netlify.app/)
 
 ## Repository Link
 
-https://github.com/programming-hero-web-course2/b10a6-pet-adoption-asifmahmud1047
+https://github.com/asifmahmud1047/Peddy-Pet-Adoption-Platform
 
 ## Project Overview
 
@@ -21,17 +21,6 @@ https://github.com/programming-hero-web-course2/b10a6-pet-adoption-asifmahmud104
 3. **Sorting by Price**: Pets can be sorted by price to help users find the most suitable pet.
 4. **Like Functionality**: Users can like their favorite pets, and liked pets are displayed in a grid.
 5. **Responsive Design**: The platform is fully responsive, providing a seamless experience across devices using Tailwind CSS.
-
-## APIs Used
-
-1. **Fetch All Pets**: Fetches a list of all available pets.
-   - Endpoint: `https://openapi.programming-hero.com/api/peddy/pets`
-2. **Fetch Pet Categories**: Retrieves all available pet categories.
-   - Endpoint: `https://openapi.programming-hero.com/api/peddy/categories`
-3. **Fetch Pets by Category**: Retrieves pets based on a specific category.
-   - Example: `https://openapi.programming-hero.com/api/peddy/category/dog`
-4. **Fetch Pet Details by ID**: Retrieves detailed information about a pet by its ID.
-   - Example: `https://openapi.programming-hero.com/api/peddy/pet/1`
 
 ## Technologies Used
 
