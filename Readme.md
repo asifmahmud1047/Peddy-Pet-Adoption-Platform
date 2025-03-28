@@ -4,7 +4,7 @@ Welcome to **Peddy**, a dynamic pet adoption platform where users can browse and
 
 ## Live Link
 
-https://leafy-nasturtium-06e292.netlify.app/
+[https://leafy-nasturtium-06e292.netlify.app/](https://peddy-pet-adoption-organization.netlify.app/)
 
 ## Repository Link
 
